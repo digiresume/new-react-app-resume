@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Form />}></Route>
-          <Route exact path='/resume' element={<Pdf />}></Route>
+          <Route path='/resume/:email' element={<Pdf />}></Route>
         </Routes>
       </Router>
     </>

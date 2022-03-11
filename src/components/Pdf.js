@@ -2,6 +2,7 @@ import React from 'react';
 import './Pdf.css';
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+import { RWebShare } from "react-web-share";
 
 
 
@@ -124,6 +125,16 @@ function Pdf(props) {
             </div>
             <br /><br />
             <button onClick={pdfDownload}>Download</button>
+            <RWebShare
+                data={{
+                    text: "Web Share - GfG",
+                    url: `http://localhost:3000/${formData.email}`,
+                    title: "GfG",
+                }}
+                onClick={() => console.log("shared successfully!")}
+            >
+                <button>Share on Web</button>
+            </RWebShare>
 
         </div>
     );

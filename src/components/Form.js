@@ -84,7 +84,7 @@ function Form(props) {
                             if (page === FormTitles.length - 1) {
                                 // alert("Resume successfully completed!");
                                 // console.log(formData);
-                                navigate('/resume');
+                                navigate(`/resume/${formData.email}`);
                                 // return < TemplateOne formData={formData} />
                             } else {
                                 setPage((currPage) => currPage + 1);
